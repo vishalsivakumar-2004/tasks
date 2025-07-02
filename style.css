@@ -1,0 +1,133 @@
+/* === Body & Base === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* === Navbar === */
+nav {
+  background: #c0392b;
+  padding: 1rem 2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  flex: 1;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+/* === Card / Container === */
+.card {
+  background: #fff;
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === Toggle Section === */
+.toggle {
+  margin-bottom: 1rem;
+}
+
+/* === Title === */
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* === Filters === */
+.filters {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.filters input,
+.filters select,
+.filters button {
+  padding: 0.5rem;
+}
+
+/* === Action Buttons === */
+.actions {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.actions button {
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* === Table === */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: red;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+tfoot td {
+  font-weight: bold;
+  background: #eee;
+}
+
+/* === Row Action Buttons === */
+.action-btn {
+  margin-right: 0.3rem;
+  cursor: pointer;
+}
+
+/* === Print Styles === */
+@media print {
+  nav,
+  .filters,
+  .actions,
+  .toggle {
+    display: none;
+  }
+
+  .card {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+}

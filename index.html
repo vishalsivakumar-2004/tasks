@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Billing Software</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.29/jspdf.plugin.autotable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <nav>
+    <h1>Billing Software</h1>
+    <ul><li>Home</li><li>Dashboard</li><li>Reports</li></ul>
+  </nav>
+  <div class="card">
+    <div class="toggle">
+      <label><input type="radio" name="dataSet" value="b1b"> B1B</label>
+      <label><input type="radio" name="dataSet" value="HSN" checked> HSN</label>
+      <label><input type="radio" name="dataSet" value="b2b"> B2B</label>
+    </div>
+    <div class="title">Sales Report</div>
+    <div class="filters">
+      <div>
+        <label>From Date:</label>
+        <input type="date" id="fromDate">
+      </div>
+      <div>
+        <label>To Date:</label>
+        <input type="date" id="toDate">
+      </div>
+      <div>
+        <label>Records per page:</label>
+        <select id="recordsPerPage">
+          <option>10</option><option>20</option><option>50</option>
+        </select>
+      </div>
+      <button onclick="applyFilters()">Apply Filters</button>
+    </div>
+    <div class="actions">
+      <button onclick="downloadPDF()">Download PDF</button>
+      <button onclick="window.print()">Print</button>
+      <button onclick="exportExcel()">Export Excel</button>
+    </div>
+    <div class="table-wrapper">
+    <table id="dataTable">
+      <thead></thead>
+      <tbody></tbody>
+      <tfoot></tfoot>
+    </table>
+  </div>
+  </div>
+<script src="main.js"></script>
+  <script src="export.js"></script>
+
+</body>
+</html>
